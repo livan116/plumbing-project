@@ -1,0 +1,58 @@
+/* fonts and colors */
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dangrek&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&display=swap');
+@import url('https://db.onlinewebfonts.com/c/c9f83a2112dba37a28475a67610471d3?family=Corporate+S+W07+Medium');
+
+
+:root{
+    --green : #389a48;
+    --blue : #022659;
+  }
+
+  .color2{
+    background-color: var(--green);
+  }
+  .text-color2{
+    color: var(--green);
+  }
+  .color1{
+    background-color: var(--blue);
+  }
+  .text-color1{
+    color: var(--blue);
+  }
+
+  .gradient {
+    background: rgb(56,154,72);/* For browsers that do not support gradients */
+    background: linear-gradient(to right, var(--blue) , var(--green));
+  }
+
+
+  @font-face {
+    font-family: heading2;
+    src: url(../fonts/Quarion-SemiBold.ttf);
+ 
+  }
+  @font-face {
+    font-family: heading3;
+    src: url(../fonts/MazinDEMO-Medium.otf);
+  }
+
+  .heading1{
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .heading2{
+    font-family: heading2;
+  }
+  .heading3{
+    font-family: heading3;
+  }
+
+  .para1{
+    font-family: "Corporate S W07 Medium";
+  }
+
+  
