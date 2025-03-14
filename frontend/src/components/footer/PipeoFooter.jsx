@@ -1,7 +1,8 @@
 import React from 'react';
 import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube, FaEnvelope } from 'react-icons/fa';
 import { FiSend } from 'react-icons/fi';
-// import '../index.css'
+
+import dropleticon from '../../assets/droplet.svg'
 
 import logo from "../../assets/logo.png"
 
@@ -53,10 +54,14 @@ const PipeoFooter = () => {
                             {['Pipe Installation', 'Drain Cleaning', 'Sewer Inspection', 'Toilet Repair', 'Faucet Repair', 'Plumbing Remodels'].map((service, index) => (
                                 <li key={`service-${index}`}>
                                     <a href="#" className="flex items-center hover:color2 transition-colors para1">
-                                        <span className="text-green-500 mr-2">
+                                        {/* <span className="text-green-500 mr-2">
+
                                             <svg className="w-3 h-3 md:w-4 md:h-4 fill-current" viewBox="0 0 20 20">
-                                                <path d="M10,0 C4.5,0 0,4.5 0,10 C0,15.5 4.5,20 10,20 C15.5,20 20,15.5 20,10 C20,4.5 15.5,0 10,0 Z"></path>
+                                                <path d="src\assets\droplet.svg"></path>
                                             </svg>
+                                        </span> */}
+                                        <span className="text-green-500 mr-2">
+                                            <img src={dropleticon} alt="Droplet" className="w-4 h-4 md:w-5 md:h-5" />
                                         </span>
                                         <span className="text-sm md:text-base">{service}</span>
                                     </a>
@@ -74,11 +79,9 @@ const PipeoFooter = () => {
                                 {['Help Center', 'Ticket Support', 'Customer Services', 'Sales Support', 'Contact us'].map((support, index) => (
                                     <li key={`support-${index}`}>
                                         <a href="#" className="flex items-center hover:text-green-500 transition-colors para1">
-                                            <span className="text-green-500 mr-2">
-                                                <svg className="w-3 h-3 md:w-4 md:h-4 fill-current" viewBox="0 0 20 20">
-                                                    <path d="M10,0 C4.5,0 0,4.5 0,10 C0,15.5 4.5,20 10,20 C15.5,20 20,15.5 20,10 C20,4.5 15.5,0 10,0 Z"></path>
-                                                </svg>
-                                            </span>
+                                        <span className="text-green-500 mr-2">
+                                            <img src={dropleticon} alt="Droplet" className="w-4 h-4 md:w-5 md:h-5" />
+                                        </span>
                                             <span className="text-sm md:text-base">{support}</span>
                                         </a>
                                     </li>
@@ -93,11 +96,9 @@ const PipeoFooter = () => {
                                 {['About us', 'Leadership', 'Careers', 'Article & News', 'Legal Notices'].map((company, index) => (
                                     <li key={`company-${index}`}>
                                         <a href="#" className="flex items-center hover:text-green-500 transition-colors para1">
-                                            <span className="text-green-500 mr-2">
-                                                <svg className="w-3 h-3 md:w-4 md:h-4 fill-current" viewBox="0 0 20 20">
-                                                    <path d="M10,0 C4.5,0 0,4.5 0,10 C0,15.5 4.5,20 10,20 C15.5,20 20,15.5 20,10 C20,4.5 15.5,0 10,0 Z"></path>
-                                                </svg>
-                                            </span>
+                                        <span className="text-green-500 mr-2">
+                                            <img src={dropleticon} alt="Droplet" className="w-4 h-4 md:w-5 md:h-5" />
+                                        </span>
                                             <span className="text-sm md:text-base">{company}</span>
                                         </a>
                                     </li>
@@ -107,7 +108,7 @@ const PipeoFooter = () => {
                     </div>
 
                     {/* Newsletter Signup */}
-                    <div className="w-full sm:w-1/2 md:w-1/3 gradient flex flex-col justify-center p-6 md:p-8 md:ml-16">
+                    <div className="w-full sm:w-1/2 md:w-1/3 gradient2 flex flex-col justify-center p-6 md:p-8 md:ml-16">
                         <div>
                             <h3 className="text-lg md:text-xl mb-2 para1 text-white">Sign up our newsletter to get update <br /> information, news and free insight.</h3>
                         </div>
@@ -117,9 +118,10 @@ const PipeoFooter = () => {
                                 placeholder="Email"
                                 className="px-4 text-gray-700 border border-gray-300 bg-white focus:outline-none"
                             />
-                            <button className="color2 text-white px-4 md:px-10 py-2 rounded-r hover:bg-green-700 transition-colors flex gap-2 items-center">
-                                <FaEnvelope size={10} className="" />
-                                <span className="text-sm md:text-base">Sign up</span>
+                            <button className="color2 px-4 md:px-8 py-2 hover:bg-green-700 transition-colors flex items-center cursor-pointer">
+                                <FaEnvelope size={25} className=" text-white pr-2 " />
+                                <span className="text-sm md:text-base text-white">Sign up</span>
+
                             </button>
                         </div>
                     </div>

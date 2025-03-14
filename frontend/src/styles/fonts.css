@@ -8,23 +8,39 @@
     --green : #389a48;
     --blue : #022659;
   }
-
   .color2{
     background-color: var(--green);
   }
-  .text-color2{
+  /* .text-color2{
     color: var(--green);
-  }
+  } */
   .color1{
     background-color: var(--blue);
   }
-  .text-color1{
+  /* .text-color1{
+    color: var(--blue);
+  } */
+  .textcolor2{
+    color: var(--green);
+  }
+  .textcolor1{
     color: var(--blue);
   }
-
+  .textcolor3{
+    color: #6c757d;
+  }
+  .dot{
+    color: var(--green)
+  }
+  
   .gradient {
     background: rgb(56,154,72);/* For browsers that do not support gradients */
     background: linear-gradient(to right, var(--blue) , var(--green));
+  }
+
+  .gradient2 {
+    background: rgb(56,154,72);
+  background: linear-gradient(144deg, rgba(56,154,72,1) 31%, rgba(2,38,89,1) 100%);
   }
 
 

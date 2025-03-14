@@ -4,12 +4,20 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FaFacebook, FaTwitter, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 import { motion } from "framer-motion";
+import p1 from "../../assets/our_team/img1.jpg"
+import p2 from "../../assets/our_team/img2.jpg"
+import p3 from "../../assets/our_team/img3.jpg"
+import p4 from "../../assets/our_team/img4.jpg"
+import p5 from "../../assets/our_team/img5.jpg"
+import p6 from "../../assets/our_team/img6.jpg"
+import p7 from "../../assets/our_team/img7.jpg"
+import p8 from "../../assets/our_team/img8.jpg"
 
 const TeamMember = ({ name, position, image }) => {
   return (
     <div className="px-2">
       <motion.div 
-        className="bg-white shadow-lg rounded-lg overflow-hidden h-full"
+        className="bg-white shadow-lg overflow-hidden h-full"
         whileHover={{ 
           y: -10,
           boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)"
@@ -34,28 +42,28 @@ const TeamMember = ({ name, position, image }) => {
               whileHover={{ scale: 1.2 }}
               whileTap={{ scale: 0.9 }}
             >
-              <FaFacebook className="text-green-500 text-lg" />
+              <FaFacebook className="textcolor2 text-lg" />
             </motion.button>
             <motion.button 
               className="bg-white rounded-full p-2 shadow-md hover:bg-green-50 transition-colors duration-200 block"
               whileHover={{ scale: 1.2 }}
               whileTap={{ scale: 0.9 }}
             >
-              <FaTwitter className="text-green-500 text-lg" />
+              <FaTwitter className="textcolor2 text-lg" />
             </motion.button>
             <motion.button 
               className="bg-white rounded-full p-2 shadow-md hover:bg-green-50 transition-colors duration-200 block"
               whileHover={{ scale: 1.2 }}
               whileTap={{ scale: 0.9 }}
             >
-              <FaLinkedin className="text-green-500 text-lg" />
+              <FaLinkedin className="textcolor2 text-lg" />
             </motion.button>
             <motion.button 
               className="bg-white rounded-full p-2 shadow-md hover:bg-green-50 transition-colors duration-200 block"
               whileHover={{ scale: 1.2 }}
               whileTap={{ scale: 0.9 }}
             >
-              <FaEnvelope className="text-green-500 text-lg" />
+              <FaEnvelope className="textcolor2 text-lg" />
             </motion.button>
           </div>
         </div>
@@ -73,42 +81,42 @@ const TeamSection = () => {
     {
       name: "Oscar Andrews",
       position: "Founder",
-      image: "/api/placeholder/400/320"
+      image: p1
     },
     {
       name: "Emily Davis",
       position: "Co-Founder",
-      image: "/api/placeholder/400/320"
+      image: p2
     },
     {
       name: "Sarah Miller",
       position: "Business Manager",
-      image: "/api/placeholder/400/320"
+      image: p3
     },
     {
       name: "Callum Rogers",
       position: "Marketing",
-      image: "/api/placeholder/400/320"
+      image: p4
     },
     {
       name: "Michael Johnson",
       position: "Tech Lead",
-      image: "/api/placeholder/400/320"
+      image: p5
     },
     {
       name: "Olivia Thompson",
       position: "UX Designer",
-      image: "/api/placeholder/400/320"
+      image: p6
     },
     {
       name: "David Kim",
       position: "Product Manager",
-      image: "/api/placeholder/400/320"
+      image: p7
     },
     {
       name: "Sophia Garcia",
       position: "Customer Relations",
-      image: "/api/placeholder/400/320"
+      image: p8
     }
   ];
 
@@ -184,7 +192,7 @@ const TeamSection = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           <motion.h2 
-            className="text-green-500 font-medium uppercase tracking-wider mb-2"
+            className="textcolor2 heading1 text-xl font-medium uppercase tracking-wider mb-2"
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.4, delay: 0.3 }}
@@ -192,7 +200,7 @@ const TeamSection = () => {
             MEET OUR TEAM
           </motion.h2>
           <motion.h3 
-            className="text-4xl font-bold text-blue-900 max-w-3xl mx-auto leading-tight"
+            className="text-4xl heading2 font-bold textcolor1 max-w-3xl mx-auto leading-tight"
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.4, delay: 0.5 }}

@@ -6,7 +6,7 @@ import "../../styles/fonts.css"
 
 const ConsultationSection = () => {
   return (
-    <div className="relative w-full h-[600px] overflow-hidden">
+    <div className="relative w-full py-16 md:h-[600px] overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 opacity color1 z-20">
         {/* You would add your actual background image here */}

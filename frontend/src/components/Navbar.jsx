@@ -4,6 +4,7 @@ import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube, FaBars, FaTimes } from 
 import { IoCalendarOutline } from 'react-icons/io5';
 import { FiPhone, FiChevronDown } from 'react-icons/fi';
 import "../styles/fonts.css"
+import logo from "../assets/logo2.png"
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -55,7 +56,7 @@ const Navbar = () => {
             {/* Logo */}
             <div className="flex items-center">
               <a href="/" className="flex items-center">
-                <img src="/logo.png" alt="Pipea Logo" className="h-12" />
+                <img src={logo} alt="Pipea Logo" className="h-12" />
               </a>
             </div>
             

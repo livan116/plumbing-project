@@ -5,33 +5,38 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./homestyles.css";
 
+import p1 from "../../assets/our_team/img1.jpg"
+import p2 from "../../assets/our_team/img2.jpg"
+import p3 from "../../assets/our_team/img3.jpg"
+import p4 from "../../assets/our_team/img4.jpg"
+
 const testimonials = [
   {
     name: "Michael Harrison",
     location: "Jakarta",
     review: "We had a major leak, but Pipeo's plumbers arrived fast and resolved it without hassle. Their professionalism and friendly service really stood out. I'm so glad we chose them!",
-    image: "https://via.placeholder.com/150", // Replace with actual image URL
+    image: p1, // Replace with actual image URL
     rating: 4.5,
   },
   {
     name: "David Thompson",
     location: "Jakarta",
     review: "The team at Pipeo did an amazing job replacing our old pipes. They were punctual and finished the job ahead of schedule. We're very satisfied with the quality of their work!",
-    image: "https://via.placeholder.com/150",
+    image: p2,
     rating: 4.8,
   },
   {
     name: "Emily Robinson",
     location: "Bandung",
     review: "Pipeo's installation of our new water heater was seamless. The team was friendly, efficient, and left everything clean when they were done. We're very happy with the results!",
-    image: "https://via.placeholder.com/150",
+    image: p3,
     rating: 4.9,
   },
   {
     name: "Sarah Johnson",
     location: "Bandung",
     review: "Great service! The plumbers at Pipeo are very professional and efficient. I am very happy with their work.",
-    image: "https://via.placeholder.com/150",
+    image: p4,
     rating: 4.7,
   },
 ];
@@ -89,8 +94,8 @@ const ReviewCarousel = () => {
     <div className="testimonial-section py-12">
       <div className="container mx-auto px-4">
         <div className="text-center mb-8">
-          <p className="text-color2 heading1 text-xl font-medium uppercase mb-2">TESTIMONIAL</p>
-          <h2 className="text-4xl font-bold heading2 text-color1">Client Feedback & Reviews</h2>
+          <p className="textcolor2 heading1 text-xl font-medium uppercase mb-2">TESTIMONIAL</p>
+          <h2 className="text-4xl font-bold heading2 textcolor1">Client Feedback & Reviews</h2>
           <div className="flex justify-center mt-4">
             <div className="flex text-2xl">
               {renderStars(4)}
@@ -103,7 +108,7 @@ const ReviewCarousel = () => {
             <div key={index} className="px-4 pb-8">
               <div className="testimonial-card relative">
                 <div className="bg-gray-100 p-6 rounded-lg shadow-sm">
-                  <p className="text-gray-600 text-center leading-relaxed">
+                  <p className="textcolor3 text-center leading-relaxed">
                     {testimonial.review}
                   </p>
                 </div>
@@ -111,7 +116,7 @@ const ReviewCarousel = () => {
                 <div className="testimonial-pointer"></div>
                 
                 <div className="flex items-center mt-6 justify-center">
-                  <div className="w-16 h-16 rounded-full overflow-hidden border-4 border-white shadow-md">
+                  <div className="w-16 h-16 rounded-full overflow-hidden shadow-md">
                     <img 
                       src={testimonial.image} 
                       alt={testimonial.name} 
@@ -119,8 +124,8 @@ const ReviewCarousel = () => {
                     />
                   </div>
                   <div className="ml-4">
-                    <p className="font-medium text-blue-900 text-lg">{testimonial.name}</p>
-                    <p className="text-gray-500">{testimonial.location}</p>
+                    <p className="font-medium textcolor1 text-lg">{testimonial.name}</p>
+                    <p className="textcolor3">{testimonial.location}</p>
                   </div>
                 </div>
               </div>
