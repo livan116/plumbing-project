@@ -11,6 +11,8 @@ import PricingSection from '../components/HomePage_components/PricingSection'
 import WhoWeAre from '../components/HomePage_components/WhoWeAre'
 import BlogCarousel from '../components/HomePage_components/BlogCarousel'
 import FAQSection from '../components/HomePage_components/FAQSection'
+import RatingSection from '../components/HomePage_components/RatingSection'
+import SubscribeSection from '../components/HomePage_components/SubscribeSection'
 
 const HomePage = () => {
   return (
@@ -24,6 +26,8 @@ const HomePage = () => {
             <WhoWeAre />
             <PricingSection />
             <ServicesSection/>
+            <RatingSection />
+            <SubscribeSection />
             <FAQSection/>
             <TeamSection/>
             <BlogCarousel/>
