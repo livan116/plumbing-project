@@ -252,7 +252,7 @@ const PricingSection = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-16" ref={sectionRef}>
+    <div className="container mx-auto px-4 md:px-24 py-8 md:py-16" ref={sectionRef}>
       <div
         className={`text-center mb-12 transition-all duration-700 ${
           sectionVisible
@@ -260,7 +260,7 @@ const PricingSection = () => {
             : "opacity-0 transform translate-y-8"
         }`}
       >
-        <h2 className="text-sm uppercase font-semibold textcolor2 tracking-wider mb-2 heading1">
+        <h2 className="text-xl uppercase font-semibold textcolor2 tracking-wider mb-2 heading1">
           CHOOSE PACKAGE
         </h2>
         <h3 className="text-4xl font-bold textcolor1 mb-8 heading2">

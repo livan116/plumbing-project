@@ -118,7 +118,7 @@ const RatingSection = () => {
   ];
 
   return (
-    <section className="color1 py-16">
+    <section className="color1 py-16 px-4 md:px-24">
       <div className="container mx-auto">
         <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((stat, index) => (

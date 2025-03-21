@@ -103,12 +103,13 @@ const ServicesSection = () => {
   };
 
   return (
-    <div className="services-section md:px-24 py-16 bg-gray-50">
+    <div className="services-section md:px-24 md:py-16 py-8 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-8">
           <h2 className="textcolor2 heading1 text-xl font-medium uppercase mb-2">WHAT WE OFFER</h2>
           <h3 className="text-4xl font-bold heading2 textcolor1 mb-2">Fast, reliable plumbing expertise</h3>
           <h3 className="text-4xl font-bold heading2 textcolor1">you can trust.</h3>
+          <p className='textcolor3 para1 my-4'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum nam eum cumque possimus, doloremque exercitationem veritatis cum voluptatibus consequuntur fugit dolores labore? Quaerat architecto placeat voluptatibus soluta reprehenderit. Assumenda impedit quaerat temporibus recusandae labore illo alias, culpa quam rerum asperiores ipsam molestiae! Molestiae quasi molestias quaerat expedita, magnam nam esse.</p>
         </div>
 
         {/* Desktop View */}

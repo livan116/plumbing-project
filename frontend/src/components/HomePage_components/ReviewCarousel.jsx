@@ -91,7 +91,7 @@ const ReviewCarousel = () => {
   };
 
   return (
-    <div className="testimonial-section py-12">
+    <div className="testimonial-section py-8 md:py-16 px-4 md:px-24">
       <div className="container mx-auto px-4">
         <div className="text-center mb-8">
           <p className="textcolor2 heading1 text-xl font-medium uppercase mb-2">TESTIMONIAL</p>

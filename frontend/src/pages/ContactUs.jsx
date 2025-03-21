@@ -3,13 +3,17 @@ import GetInTouchCard from "../components/ContactUs_Components/GetInTouchCard";
 import ContactForm from "../components/ContactUs_Components/ContactForm";
 import CommonQuestions from "../components/ContactUs_Components/CommonQuestions";
 import "../styles/mapComponent.css"
+import ReviewCarousel from "../components/HomePage_components/ReviewCarousel";
+import Navbar from "../components/Navbar";
 
 export default function ContactUs(){
 
 
     return(
+        <>
+        <Navbar/>
         <div className="bg-white flex flex-col flex-wrap ">
-            <div class="w-[100vw] bg-red-400 mx-auto relative z-0">
+            <div class="w-[100vw]mx-auto relative z-0">
                 <div class="map-container shadow-md ">
                     <iframe
                         class="map-frame border-0 "
@@ -21,20 +25,21 @@ export default function ContactUs(){
                     
                 </div>
             </div>
-            <div className="justify-center items-center mt-24 px-6 gap-24 flex flex-col  lg:flex-row  ">
+            <div className="justify-center items-center mt-24 px-6 md:pl-24 gap-24 flex flex-col  lg:flex-row  ">
 
                 
                 <ContactForm />
                 
-                <div className="lg:relative -top-56 right-10 z-20">
+                <div className="lg:relative -top-56 right-10 z-20 md:pr-12">
                 <GetInTouchCard  />
                 </div>
             </div>
-            <div className="">
+            {/* <div className="">
                 <CommonQuestions />
-            </div>
+            </div> */}
            
         </div>
-        
+        {/* <ReviewCarousel/> */}
+        </>
     );
 }

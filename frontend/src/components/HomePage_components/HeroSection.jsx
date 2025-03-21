@@ -49,7 +49,7 @@ const HeroSection = () => {
             </motion.p>
             
             <Button 
-              text="Discover more" 
+              text="Book an Appointment" 
               variant="primary" 
               icon="arrow" 
               delay={0.5}

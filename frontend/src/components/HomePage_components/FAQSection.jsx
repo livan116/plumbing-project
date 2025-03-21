@@ -65,9 +65,9 @@ const FAQSection = () => {
   };
 
   return (
-    <div className="w-full max-w-7xl mx-auto px-4 py-16">
+    <div className="w-full mx-auto my-8 px-4 md:px-24">
       <div className="text-center mb-12">
-        <h2 className="text-[#389a48] text-lg heading1 uppercase tracking-widest mb-5 md:mb-5">COMMON QUESTIONS</h2>
+        <h2 className="textcolor2 text-xl heading1 uppercase tracking-widest mb-5 md:mb-5">COMMON QUESTIONS</h2>
         <h1 className="text-2xl md:text-[2.5rem] heading3 font-bold text-[#022659]">Most Popular Questions</h1>
       </div>
 

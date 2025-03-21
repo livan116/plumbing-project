@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { BsEnvelope } from 'react-icons/bs';
 import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube, FaBars, FaTimes } from 'react-icons/fa';
 import { IoCalendarOutline } from 'react-icons/io5';
@@ -20,6 +21,8 @@ const Navbar = () => {
       [key]: !dropdownOpen[key]
     });
   };
+
+  const navigate = useNavigate();
 
   return (
     <header className="w-full flex flex-col">
@@ -65,7 +68,10 @@ const Navbar = () => {
               <div className="relative group">
                 <button 
                   className="flex items-center text-gray-700 hover:text-green-600 font-medium"
-                  onClick={() => toggleDropdown('homepage')}
+                  onClick={() => {
+                    toggleDropdown('homepage')
+                    navigate('/')
+                  }}
                 >
                   Homepage
                   <FiChevronDown className="ml-1" />
@@ -81,12 +87,15 @@ const Navbar = () => {
                 )}
               </div>
               
-              <a href="#" className="text-gray-700 hover:text-green-600 font-medium">About us</a>
+              <a href="#" className="text-gray-700 hover:text-green-600 font-medium" onClick={()=>navigate('/about')} >About us</a>
               
               <div className="relative group">
                 <button 
                   className="flex items-center text-gray-700 hover:text-green-600 font-medium"
-                  onClick={() => toggleDropdown('services')}
+                  onClick={() => {
+                    toggleDropdown('services')
+                    navigate('/services')
+                  }}
                 >
                   Services
                   <FiChevronDown className="ml-1" />
@@ -116,8 +125,8 @@ const Navbar = () => {
                 {dropdownOpen.pages && (
                   <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg z-10">
                     <div className="py-1">
-                      <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Page 1</a>
-                      <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Page 2</a>
+                      <a href="/blogs" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Blogs</a>
+                      <a href="/schedulePage" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">class schedule</a>
                       <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Page 3</a>
                     </div>
                   </div>
@@ -161,7 +170,10 @@ const Navbar = () => {
               <div className="border-b pb-2">
                 <button 
                   className="flex items-center justify-between w-full text-gray-700 font-medium"
-                  onClick={() => toggleDropdown('homepage')}
+                  onClick={() => {
+                    toggleDropdown('homepage')
+                    navigate('/')
+                  }}
                 >
                   Homepage
                   <FiChevronDown className={`ml-1 transform ${dropdownOpen.homepage ? 'rotate-180' : ''}`} />
@@ -175,12 +187,15 @@ const Navbar = () => {
                 )}
               </div>
               
-              <a href="#" className="text-gray-700 font-medium border-b pb-2">About us</a>
+              <a href="#" className="text-gray-700 font-medium border-b pb-2" onClick={()=>navigate('/about')}>About us</a>
               
               <div className="border-b pb-2">
                 <button 
                   className="flex items-center justify-between w-full text-gray-700 font-medium"
-                  onClick={() => toggleDropdown('services')}
+                  onClick={() => {
+                    toggleDropdown('services')
+                    navigate('/services')
+                  }}
                 >
                   Services
                   <FiChevronDown className={`ml-1 transform ${dropdownOpen.services ? 'rotate-180' : ''}`} />
@@ -207,8 +222,8 @@ const Navbar = () => {
                 </button>
                 {dropdownOpen.pages && (
                   <div className="mt-2 pl-4 space-y-2">
-                    <a href="#" className="block text-gray-600 hover:text-green-600">Page 1</a>
-                    <a href="#" className="block text-gray-600 hover:text-green-600">Page 2</a>
+                    <a href="/blogs" className="block text-gray-600 hover:text-green-600">Page 1</a>
+                    <a href="/schedulePage" className="block text-gray-600 hover:text-green-600">class schedule</a>
                     <a href="#" className="block text-gray-600 hover:text-green-600">Page 3</a>
                   </div>
                 )}

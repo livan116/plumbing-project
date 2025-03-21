@@ -128,7 +128,7 @@ const BlogCarousel = () => {
           <h2 className="text-3xl md:text-5xl heading3 font-bold textcolor1 mt-2">Latest Post & Article</h2>
         </div>
         
-        <div className="mb-12">
+        <div className="">
           <Slider {...settings} className="h-full">
             {blogPosts.map((blog) => (
               <BlogCard key={blog.id} blog={blog} />

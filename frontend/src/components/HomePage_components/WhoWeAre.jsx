@@ -169,7 +169,7 @@ const WhoWeAre = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
           >
             <motion.p
-              className="textcolor2 font-medium mb-2 md:mb-4 uppercase tracking-wider heading1 text-sm md:text-base"
+              className="textcolor2 font-medium mb-2 md:mb-4 uppercase tracking-wider heading1 text-xl "
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.4 }}

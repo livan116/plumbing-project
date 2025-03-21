@@ -1,10 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Button from '../Button';
-import image from '../../assets/homepage/img2.webp'
+// import image from '../../assets/homepage/img2.webp'
 import "../../styles/fonts.css"
 
-const ConsultationSection = () => {
+const ConsultationSection = ({
+  title,para,image
+}) => {
   return (
     <div className="relative w-full py-16 md:h-[600px] overflow-hidden">
       {/* Background Image with Overlay */}
@@ -15,21 +17,19 @@ const ConsultationSection = () => {
       
       {/* Content Container */}
       <motion.div 
-        className="relative z-20 flex flex-col items-center justify-center h-full px-4 text-center"
+        className="relative z-20 flex flex-col items-center justify-center h-full px-4 text-center md:px-24"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
         {/* Heading */}
         <motion.h2 
-          className="text-4xl heading1 md:text-6xl font-bold text-white mb-6 leading-tight"
+          className="text-4xl heading1 md:text-6xl max-w-2xl font-bold text-white mb-6 leading-tight"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          GET EXPERT ADVICE WITH A
-          <br />
-          FREE CONSULTATION!
+          {title}
         </motion.h2>
         
         {/* Subtext */}
@@ -39,7 +39,7 @@ const ConsultationSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          Ultrices quam mattis posuere porttitor tellus rhoncus tristique. Primis aliquam dignissim interdum vel suscipit sodales.
+         {para}
         </motion.p>
         
         {/* Using your custom Button component with proper props */}

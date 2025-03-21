@@ -7,6 +7,7 @@
 :root{
     --green : #389a48;
     --blue : #022659;
+    --lightgreen: #8ae20ed7;
   }
   .color2{
     background-color: var(--green);
@@ -42,6 +43,19 @@
     background: rgb(56,154,72);
   background: linear-gradient(144deg, rgba(56,154,72,1) 31%, rgba(2,38,89,1) 100%);
   }
+
+  .banner-gradient {
+    background: rgb(56,154,72);
+    background: linear-gradient(280deg, rgba(56,154,72,1) 15%, rgba(2,38,89,1) 59%);
+  }
+
+  .iconcolor {
+    background-color: var(--lightgreen);
+  }
+  .bordercolor2:hover {
+    border-color: var(--lightgreen);
+  }  
+  
 
 
   @font-face {

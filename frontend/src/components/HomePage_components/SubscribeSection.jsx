@@ -26,8 +26,8 @@ const SubscribeSection = () => {
   };
 
   return (
-    <section className="py-16 px-4 bg-white">
-      <div className="max-w-3xl mx-auto text-center">
+    <section className="py-16 px-4">
+      <div className="max-w-3xl mx-auto text-center md:px-24">
         <motion.h2
           className="text-3xl md:text-4xl font-medium text-gray-800 mb-6 heading1"
           initial={{ opacity: 0, y: -20 }}
@@ -82,7 +82,7 @@ const SubscribeSection = () => {
             </div>
           </div>
 
-          <div className="flex items-center mb-4">
+          <div className="flex items-center">
             <input
               type="checkbox"
               id="privacy-policy"
@@ -116,7 +116,7 @@ const SubscribeSection = () => {
         </motion.form>
 
         <motion.div
-          className="mt-12 opacity-50"
+          className=" opacity-50"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 0.5 }}
           transition={{ duration: 0.5, delay: 0.6 }}

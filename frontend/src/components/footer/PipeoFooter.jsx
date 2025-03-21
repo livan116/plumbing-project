@@ -81,7 +81,7 @@ const PipeoFooter = () => {
                     </div>
 
                     {/* Newsletter Signup */}
-                    <div className="lg:p-14 lg:mt-0 md:w-full mt-6 lg:w-1/3 md:mt-5 flex flex-col justify-center gradient p-6 md:p-8">
+                    <div className="lg:p-14 lg:mt-0 md:w-full mt-6 lg:w-1/3 md:mt-5 flex flex-col justify-center gradient2 p-6 md:p-8">
                         <h3 className="lg:text-lg md:text-xl mb-4 para1 text-white">Sign up our newsletter to get update information, news and free insight.</h3>
                         {/* <p className="text-sm lg:text-lg md:text-xl mb-2 para1 text-white"></p> */}
                         <div className="flex w-full">
