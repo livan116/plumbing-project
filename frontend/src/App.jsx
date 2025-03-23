@@ -7,6 +7,7 @@ import './App.css'
 import ContactUs from './pages/ContactUs';
 import BlogsSection from './pages/BlogsSection';
 import ClassSchedulePage from './pages/ClassSchedulePage';
+import Error404 from './pages/Error404';
 
 
 const App = () => {
@@ -20,6 +21,8 @@ const App = () => {
         <Route path='/services' element={<Services/>}/>
         <Route path='/blogs' element={<BlogsSection/>}/>
         <Route path='/schedulePage' element={<ClassSchedulePage/>}/>
+        <Route path='/error' element={<Error404/>}/>
+
       
       </Routes>
 

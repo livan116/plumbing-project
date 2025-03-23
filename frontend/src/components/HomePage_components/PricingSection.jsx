@@ -6,7 +6,6 @@ import { FaTools } from "react-icons/fa";
 import Button from "../Button";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "../../styles/fonts.css"
 
 const PricingCard = ({
   title,
@@ -24,7 +23,7 @@ const PricingCard = ({
     <div
       className={`flex flex-col h-full p-6 rounded-lg shadow-md transition-all duration-700 ${
         isHighlighted
-          ? "gradient2 text-white"
+          ? "bg-gradient-to-b from-green-600 to-blue-900 text-white"
           : "bg-white"
       } ${
         isVisible
@@ -37,30 +36,26 @@ const PricingCard = ({
         <div className="mb-4">
           <Icon
             className={`w-10 h-10 ${
-              isHighlighted ? "text-white" : "textcolor2"
+              isHighlighted ? "text-white" : "text-green-600"
             }`}
           />
         </div>
 
-        <h3 className={`text-xl font-bold mb-2 heading2 
-                ${isHighlighted ? "text-white" : "textcolor1"}
-            `}>{title}</h3>
+        <h3 className="text-xl font-bold mb-2 heading2">{title}</h3>
 
         <p
           className={`text-sm mb-4 para1 ${
-            isHighlighted ? "text-white/80" : "textcolor3"
+            isHighlighted ? "text-white/80" : "text-gray-600"
           }`}
         >
           {description}
         </p>
 
         <div className="border-t border-b py-4 my-4 flex items-end">
-          <span className={`text-4xl font-bold heading2
-                ${isHighlighted ? "text-white" : "textcolor1"}
-            `}>${price}</span>
+          <span className="text-4xl font-bold heading2">${price}</span>
           <span
             className={`ml-2 heading2 ${
-              isHighlighted ? "text-white/80" : "textcolor3"
+              isHighlighted ? "text-white/80" : "text-gray-500"
             }`}
           >
             /Monthly
@@ -68,20 +63,18 @@ const PricingCard = ({
         </div>
 
         <div className="mb-6">
-          <h4 className={`
-                ${isHighlighted ? "text-white" : "textcolor3"}
-            `}>Features :</h4>
+          <h4 className="text-lg font-semibold mb-3 heading2">Features :</h4>
           <ul className="space-y-2">
             {features.map((feature, index) => (
               <li key={index} className="flex items-start">
                 <span
-                  className={`mr-2 mt-1 textcolor2 ${
+                  className={`mr-2 mt-1 text-green-500 ${
                     isHighlighted ? "text-white" : ""
                   }`}
                 >
                   ✓
                 </span>
-                <span className={`para1 ${isHighlighted ? "text-white" : "textcolor3"}`}>{feature}</span>
+                <span className="para1">{feature}</span>
               </li>
             ))}
           </ul>
@@ -252,7 +245,7 @@ const PricingSection = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 md:px-24 py-8 md:py-16" ref={sectionRef}>
+    <div className="container mx-auto px-4 py-16" ref={sectionRef}>
       <div
         className={`text-center mb-12 transition-all duration-700 ${
           sectionVisible
@@ -260,10 +253,10 @@ const PricingSection = () => {
             : "opacity-0 transform translate-y-8"
         }`}
       >
-        <h2 className="text-xl uppercase font-semibold textcolor2 tracking-wider mb-2 heading1">
+        <h2 className="text-sm uppercase font-semibold text-green-600 tracking-wider mb-2 heading1">
           CHOOSE PACKAGE
         </h2>
-        <h3 className="text-4xl font-bold textcolor1 mb-8 heading2">
+        <h3 className="text-4xl font-bold text-blue-900 mb-8 heading2">
           Plumbing made simple with fast, <br className="hidden md:block" />
           effective solutions.
         </h3>
@@ -371,8 +364,8 @@ const PricingSection = () => {
 
         @media (max-width: 480px) {
           .mobile-slide-item {
-            width: 100vw;
-            max-width: 100vw;
+            width: 80vw;
+            max-width: 350px;
           }
         }
 
