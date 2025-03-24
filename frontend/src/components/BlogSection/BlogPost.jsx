@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import ServiceCard from "./ServiceCard";
-import Sidebar from "./Sidebar"; // New sidebar component
+import Sidebar from './SideBar'
 import LatestPosts from "../Blog_Archive/LatestPosts"
 import "../../styles/fonts.css";
 
