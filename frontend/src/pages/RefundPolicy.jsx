@@ -9,6 +9,8 @@ import {
   Store,
   ReceiptText,
 } from "lucide-react";
+import PipeoFooter from "../components/footer/PipeoFooter";
+import Navbar from "../components/Navbar";
 
 // AnimatedSection component for fade-in sections
 const AnimatedSection = ({ children, delay = 0 }) => {
@@ -23,6 +25,9 @@ const AnimatedSection = ({ children, delay = 0 }) => {
   }, [delay]);
 
   return (
+    <>
+ 
+
     <div
       className={`transition-all duration-700 transform ${
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
@@ -30,6 +35,7 @@ const AnimatedSection = ({ children, delay = 0 }) => {
     >
       {children}
     </div>
+    </>
   );
 };
 
@@ -38,7 +44,10 @@ const PolicySection = ({ title, icon, children }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="mb-8 border border-gray-200 rounded-lg shadow-sm overflow-hidden">
+
+   <>
+
+     <div className="mb-8 border border-gray-200 rounded-lg shadow-sm overflow-hidden">
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center justify-between w-full p-4 text-left bg-white hover:bg-gray-50 transition-colors duration-200"
@@ -64,6 +73,8 @@ const PolicySection = ({ title, icon, children }) => {
         </div>
       </div>
     </div>
+   
+   </>
   );
 };
 
@@ -97,6 +108,7 @@ const IntroSection = () => (
 const RefundPolicy = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-100">
+    <Navbar/>
       <div className="max-w-4xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
         <AnimatedSection>
           <div className="text-center mb-12">
@@ -383,6 +395,7 @@ const RefundPolicy = () => {
           </div>
         </AnimatedSection>
       </div>
+      <PipeoFooter/>
     </div>
   );
 };

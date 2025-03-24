@@ -10,19 +10,26 @@ import GallerySection from '../components/Gallery/GallerySection'
 import image from "../assets/homepage/img6.webp"
 import ConsultationSection from '../components/HomePage_components/ConsultationSection'
 import PricingSection from '../components/HomePage_components/PricingSection'
+import PlumbingService from '../components/Why_Choose_Us/PlumbingService'
+import ReviewCarousel from '../components/HomePage_components/ReviewCarousel'
+import { Contact } from 'lucide-react'
+import ContactComponent from '../components/ContactComponent'
 
 const About = () => {
   return (
     <div>
-    <Navbar/>
+      <Navbar/>
       <BannerSection/>
       <WhoWeAre />
       <ServicesSection/>
+      <PlumbingService/>
       <TrustedBrands/>
       <GallerySection/>
       <PricingSection/>
+      <ContactComponent/>
       <TeamSection/>
       <ConsultationSection title={"Get Expert Advice with a Free Consultation!"} para={"Ultrices quam mattis posuere porttitor tellus rhoncus tristique. Primis aliquam dignissim interdum vel suscipit sodales."} image={image} />
+      <ReviewCarousel/>
       <PipeoFooter/>
     </div>
   )

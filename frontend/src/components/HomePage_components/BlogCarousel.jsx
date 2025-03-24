@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import Slider from "react-slick";
 import { motion } from "framer-motion";
 import "slick-carousel/slick/slick.css";
@@ -10,6 +11,9 @@ import img4 from "../../assets/blogs/pic4.jpg"
 
 const BlogCarousel = () => {
   // Sample blog data
+
+  const navigate = useNavigate();
+   
   const blogPosts = [
     {
       id: 1,
@@ -97,7 +101,7 @@ const BlogCarousel = () => {
         whileHover={{ scale: 1.02 }}
         transition={{ duration: 0.3 }}
       >
-        <div className="bg-white shadow-md overflow-hidden cursor-pointer flex flex-col h-full">
+        <div className="bg-white shadow-md overflow-hidden cursor-pointer flex flex-col h-full" onClick={()=>navigate('/blogs')} >
           <div className="h-48 overflow-hidden">
             <img 
               src={blog.image} 

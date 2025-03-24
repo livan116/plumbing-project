@@ -18,14 +18,14 @@ export default function CommonQuestions() {
             question: "Accumsan curabitur erat leo ultricies?",
             answer: "Habitant dui imperdiet cubilia pede curabitur consectetuer dolor massa. Sociosqu arcu fusce hac sodales orci bibendum suscipit commodo id montes. Arcu nec ex at tellus nisi aenean dignissim sodales."
         },
-        {
-            question: "Magna dapibus feugiat nibh hendrerit ante et?",
-            answer: "Habitant dui imperdiet cubilia pede curabitur consectetuer dolor massa. Sociosqu arcu fusce hac sodales orci bibendum suscipit commodo id montes. Arcu nec ex at tellus nisi aenean dignissim sodales."
-        },
-        {
-            question: "Phasellus risus dui integer aliquam tortor?",
-            answer: "Habitant dui imperdiet cubilia pede curabitur consectetuer dolor massa. Sociosqu arcu fusce hac sodales orci bibendum suscipit commodo id montes. Arcu nec ex at tellus nisi aenean dignissim sodales."
-        }
+        // {
+        //     question: "Magna dapibus feugiat nibh hendrerit ante et?",
+        //     answer: "Habitant dui imperdiet cubilia pede curabitur consectetuer dolor massa. Sociosqu arcu fusce hac sodales orci bibendum suscipit commodo id montes. Arcu nec ex at tellus nisi aenean dignissim sodales."
+        // },
+        // {
+        //     question: "Phasellus risus dui integer aliquam tortor?",
+        //     answer: "Habitant dui imperdiet cubilia pede curabitur consectetuer dolor massa. Sociosqu arcu fusce hac sodales orci bibendum suscipit commodo id montes. Arcu nec ex at tellus nisi aenean dignissim sodales."
+        // }
     ];
     const questions2 = [
         {
@@ -40,14 +40,14 @@ export default function CommonQuestions() {
             question: "Accumsan curabitur erat leo ultricies?",
             answer: "Habitant dui imperdiet cubilia pede curabitur consectetuer dolor massa. Sociosqu arcu fusce hac sodales orci bibendum suscipit commodo id montes. Arcu nec ex at tellus nisi aenean dignissim sodales."
         },
-        {
-            question: "Magna dapibus feugiat nibh hendrerit ante et?",
-            answer: "Habitant dui imperdiet cubilia pede curabitur consectetuer dolor massa. Sociosqu arcu fusce hac sodales orci bibendum suscipit commodo id montes. Arcu nec ex at tellus nisi aenean dignissim sodales."
-        },
-        {
-            question: "Phasellus risus dui integer aliquam tortor?",
-            answer: "Habitant dui imperdiet cubilia pede curabitur consectetuer dolor massa. Sociosqu arcu fusce hac sodales orci bibendum suscipit commodo id montes. Arcu nec ex at tellus nisi aenean dignissim sodales."
-        }
+        // {
+        //     question: "Magna dapibus feugiat nibh hendrerit ante et?",
+        //     answer: "Habitant dui imperdiet cubilia pede curabitur consectetuer dolor massa. Sociosqu arcu fusce hac sodales orci bibendum suscipit commodo id montes. Arcu nec ex at tellus nisi aenean dignissim sodales."
+        // },
+        // {
+        //     question: "Phasellus risus dui integer aliquam tortor?",
+        //     answer: "Habitant dui imperdiet cubilia pede curabitur consectetuer dolor massa. Sociosqu arcu fusce hac sodales orci bibendum suscipit commodo id montes. Arcu nec ex at tellus nisi aenean dignissim sodales."
+        // }
     ];
 
     const toggleQuestion = (index) => {
@@ -58,9 +58,9 @@ export default function CommonQuestions() {
     };
 
     return (
-        <div className="max-w-max mx-auto px-6 lg:px-12 py-12">
+        <div className=" px-6 md:px-24 py-12">
             <div className="text-center mb-12">
-                <div className="textcolor1 font-medium heading1 uppercase text-sm mb-3">
+                <div className="textcolor2 font-medium heading1 uppercase text-xl mb-3">
                     COMMON QUESTIONS
                 </div>
                 <h2 className="textcolor1 heading2 text-4xl font-bold">

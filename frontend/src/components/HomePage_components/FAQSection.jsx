@@ -34,26 +34,7 @@ const FAQSection = () => {
         question: "Habitasse torquent convallis etiam platea viverra nulla?",
         answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Sed non mauris vitae erat consequat auctor eu in elit."
       },
-      {
-        id: 7,
-        question: "Eleifend lacus luctus odio aliquet magna nisl?",
-        answer: "Fusce non nulla quis quam hendrerit finibus. Suspendisse potenti. Nullam auctor massa at ex pulvinar, vel tincidunt ipsum aliquam. Curabitur viverra neque vel nisi ornare, vel ultrices libero gravida."
-      },
-      {
-        id: 8,
-        question: "Accumsan curabitur erat leo ultricies?",
-        answer: "Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem."
-      },
-      {
-        id: 9,
-        question: "Magna dapibus feugiat nibh hendrerit ante et?",
-        answer: "Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu."
-      },
-      {
-        id: 10,
-        question: "Phasellus risus dui integer aliquam tortor?",
-        answer: "In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi."
-      },
+      
   ];
 
   // State to track which FAQ item is open (only one at a time)

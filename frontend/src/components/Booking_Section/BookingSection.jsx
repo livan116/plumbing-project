@@ -243,7 +243,7 @@ const BookingSection = () => {
     <section 
       id="booking" 
       ref={sectionRef}
-      className="py-16 bg-gray-50"
+      className="py-8 bg-gray-50"
     >
       <div className="container mx-auto px-4">
         <motion.div

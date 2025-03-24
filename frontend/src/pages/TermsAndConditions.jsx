@@ -9,6 +9,8 @@ import {
   Handshake,
   Globe,
 } from "lucide-react";
+import Navbar from "../components/Navbar";
+import PipeoFooter from "../components/footer/PipeoFooter";
 
 // AnimatedSection component for fade-in sections
 const AnimatedSection = ({ children, delay = 0 }) => {
@@ -101,6 +103,8 @@ const IntroSection = () => (
 const TermsAndConditions = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-100">
+
+    <Navbar/>
       <div className="max-w-4xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
         <AnimatedSection>
           <div className="text-center mb-12">
@@ -346,6 +350,7 @@ const TermsAndConditions = () => {
           </div>
         </AnimatedSection>
       </div>
+      <PipeoFooter/>
     </div>
   );
 };

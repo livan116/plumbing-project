@@ -15,10 +15,12 @@ import RatingSection from '../components/HomePage_components/RatingSection'
 import SubscribeSection from '../components/HomePage_components/SubscribeSection'
 import TrustedBrands from '../components/HomePage_components/TrustedBrands'
 import PlumbingService from '../components/Why_Choose_Us/PlumbingService'
-
 import image from '../assets/homepage/img2.webp'
 import ContactUs from './ContactUs'
 import BookingSection from '../components/Booking_Section/BookingSection'
+import ContactComponent from '../components/ContactComponent'
+import PopUpSection from '../components/PopUpSection'
+
 
 const HomePage = () => {
   return (
@@ -26,21 +28,22 @@ const HomePage = () => {
         <div className='Navbar'>
             <Navbar/>
             <HeroSection/>
+            <BookingSection/>
             <ConsultationSection title={"Get Expert Advice with a Free Consultation!"} para={"Ultrices quam mattis posuere porttitor tellus rhoncus tristique. Primis aliquam dignissim interdum vel suscipit sodales."} image={image} />
             <ServicesSection/>
             <PricingSection />
-            <BookingSection/>
             <WhoWeAre />
             <ReviewCarousel/>
             <RatingSection />
             <TrustedBrands/>
             <PlumbingService/>
-            {/* <ContactUs/> */}
+            <ContactComponent/>
             <FAQSection/>
             <TeamSection/>
             <SubscribeSection />
             <BlogCarousel/>
             <PipeoFooter/>
+            <PopUpSection />
         </div>
     </>
   )

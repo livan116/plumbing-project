@@ -8,7 +8,19 @@
     --green : #389a48;
     --blue : #022659;
     --lightgreen: #8ae20ed7;
+    --white: #ffffff;
+  --fb-bg: #3b5998;
+  --fb-bg-hover: #2d4373;
+  --twitter-bg: #1da1f2;
+  --twitter-bg-hover: #0f81c7;
+  --linkedin-bg: #0077b5;
+  --linkedin-bg-hover: #046293;
+  --whatsapp-bg: #25d366;
+  --whatsapp-bg-hover: #128c7e;
+  --gray:#6c757d;
+  --bg-gray:#edeef0;
   }
+  
   .color2{
     background-color: var(--green);
   }
@@ -28,25 +40,37 @@
     color: var(--blue);
   }
   .textcolor3{
-    color: #6c757d;
+    color: var(--gray);
+  }
+  .textcolor4 {
+    color: var(--lightgreen);
+  }
+  
+  .textcolor5{
+    color: var(--white);
   }
   .dot{
     color: var(--green)
   }
   
   .gradient {
-    background: rgb(56,154,72);/* For browsers that do not support gradients */
-    background: linear-gradient(to right, var(--blue) , var(--green));
+    background: var(--blue);/* For browsers that do not support gradients */
+    /* background: linear-gradient(to right, var(--blue) , var(--green)); */
+  }
+
+  .gradient1 {
+    background: var(--blue); /* For browsers that do not support gradients */
+    /* background: linear-gradient(to bottom, var(--green), var(--blue)); */
   }
 
   .gradient2 {
-    background: rgb(56,154,72);
-  background: linear-gradient(144deg, rgba(56,154,72,1) 31%, rgba(2,38,89,1) 100%);
+    background: var(--blue);
+  /* background: linear-gradient(144deg, rgba(56,154,72,1) 31%, rgba(2,38,89,1) 100%); */
   }
 
   .banner-gradient {
-    background: rgb(56,154,72);
-    background: linear-gradient(280deg, rgba(56,154,72,1) 15%, rgba(2,38,89,1) 59%);
+    background: var(--blue);
+    /* background: linear-gradient(280deg, rgba(56,154,72,1) 15%, rgba(2,38,89,1) 59%); */
   }
 
   .iconcolor {
@@ -55,6 +79,39 @@
   .bordercolor2:hover {
     border-color: var(--lightgreen);
   }  
+
+
+
+/* icons */
+.twitter-bg {
+  background-color: var(--twitter-bg);
+}
+.twitter-bg:hover {
+  background-color: var(--twitter-bg-hover);
+}
+.linkedin-bg {
+  background-color: var(--linkedin-bg);
+}
+.linkedin-bg:hover {
+  background-color: var(--linkedin-bg-hover);
+}
+.watsapp-bg {
+  background-color: var(--whatsapp-bg);
+}
+.watsapp-bg:hover {
+  background-color: var(--whatsapp-bg-hover);
+}
+
+.fb-bg {
+  background-color: var(--fb-bg);
+}
+.fb-bg:hover {
+  background-color: var(--fb-bg-hover);
+}
+
+.bg-gray {
+  background-color: var(--bg-gray);
+}
   
 
 
@@ -83,6 +140,7 @@
 
   .para1{
     font-family: "Corporate S W07 Medium";
+    font-size: 16px;
   }
 
   

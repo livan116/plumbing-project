@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import Button from "../Button";
 import { FaTrophy } from "react-icons/fa";
 import repair from "../../assets/repair.png";
@@ -9,6 +9,14 @@ import video from "../../assets/videos/video1.mp4";
 const WhoWeAre = () => {
   const videoRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
+  const sectionRef = useRef(null);
+  
+  // Set up intersection observer
+  const isInView = useInView(sectionRef, {
+    once: true, // Animation only happens once
+    amount: 0.2, // Trigger when 20% of the element is in view
+    margin: "0px 0px -100px 0px" // Start animation slightly before section is in view
+  });
 
   const handleVideoToggle = () => {
     if (videoRef.current) {
@@ -22,14 +30,17 @@ const WhoWeAre = () => {
   };
 
   return (
-    <section className="w-full overflow-hidden bg-gray-50 py-8 md:py-12 lg:py-16">
+    <section 
+      ref={sectionRef} 
+      className="w-full overflow-hidden bg-gray-50 py-8 md:py-12 lg:py-16"
+    >
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row lg:items-center">
           {/* Left side with icon, title and image */}
           <motion.div
             className="relative mb-8 lg:mb-0 lg:w-1/2 w-full"
             initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
+            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
             transition={{ duration: 0.6 }}
           >
             {/* Small screens layout */}
@@ -39,7 +50,7 @@ const WhoWeAre = () => {
                 <div className="flex flex-col items-center justify-center text-white">
                   <motion.div
                     initial={{ scale: 0 }}
-                    animate={{ scale: 1 }}
+                    animate={isInView ? { scale: 1 } : { scale: 0 }}
                     transition={{ delay: 0.3, duration: 0.5 }}
                     className="mb-4 bg-white p-3 rounded-full w-16 h-16 flex items-center justify-center border-green-600"
                   >
@@ -47,7 +58,7 @@ const WhoWeAre = () => {
                   </motion.div>
                   <motion.h3
                     initial={{ y: 10, opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
+                    animate={isInView ? { y: 0, opacity: 1 } : { y: 10, opacity: 0 }}
                     transition={{ delay: 0.4, duration: 0.5 }}
                     className="text-xl font-bold mb-0 text-center heading2"
                   >
@@ -55,7 +66,7 @@ const WhoWeAre = () => {
                   </motion.h3>
                   <motion.h3
                     initial={{ y: 10, opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
+                    animate={isInView ? { y: 0, opacity: 1 } : { y: 10, opacity: 0 }}
                     transition={{ delay: 0.45, duration: 0.5 }}
                     className="text-xl font-bold mb-0 text-center heading2"
                   >
@@ -63,7 +74,7 @@ const WhoWeAre = () => {
                   </motion.h3>
                   <motion.h3
                     initial={{ y: 10, opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
+                    animate={isInView ? { y: 0, opacity: 1 } : { y: 10, opacity: 0 }}
                     transition={{ delay: 0.5, duration: 0.5 }}
                     className="text-xl font-bold mb-2 text-center heading2"
                   >
@@ -71,7 +82,7 @@ const WhoWeAre = () => {
                   </motion.h3>
                   <motion.p
                     initial={{ y: 10, opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
+                    animate={isInView ? { y: 0, opacity: 1 } : { y: 10, opacity: 0 }}
                     transition={{ delay: 0.55, duration: 0.5 }}
                     className="text-xs text-center para1"
                   >
@@ -83,14 +94,14 @@ const WhoWeAre = () => {
               {/* Mobile image */}
               <motion.div
                 initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+                animate={isInView ? { opacity: 1 } : { opacity: 0 }}
                 transition={{ delay: 0.2, duration: 0.6 }}
                 className="w-full"
               >
                 <img
                   src={repair}
                   alt="Plumber working on pipes"
-                  className="w-full h-100 md:h-auto object-cover shadow-lg"
+                  className="w-full mt-2 h-70 md:h-auto object-cover shadow-lg"
                 />
               </motion.div>
             </div>
@@ -104,7 +115,7 @@ const WhoWeAre = () => {
               <div className="md:absolute flex flex-col justify-center items-center left-0 mt-15 z-10 w-64 p-6 text-white">
                 <motion.div
                   initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
+                  animate={isInView ? { scale: 1 } : { scale: 0 }}
                   transition={{ delay: 0.3, duration: 0.5 }}
                   className="mb-6 bg-white p-4 rounded-full w-20 h-20 flex items-center justify-center border-green-600"
                 >
@@ -112,7 +123,7 @@ const WhoWeAre = () => {
                 </motion.div>
                 <motion.h3
                   initial={{ y: 20, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
+                  animate={isInView ? { y: 0, opacity: 1 } : { y: 20, opacity: 0 }}
                   transition={{ delay: 0.4, duration: 0.5 }}
                   className="text-2xl font-bold mb-0 text-center heading2"
                 >
@@ -120,7 +131,7 @@ const WhoWeAre = () => {
                 </motion.h3>
                 <motion.h3
                   initial={{ y: 20, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
+                  animate={isInView ? { y: 0, opacity: 1 } : { y: 20, opacity: 0 }}
                   transition={{ delay: 0.45, duration: 0.5 }}
                   className="text-2xl font-bold mb-0 text-center heading2"
                 >
@@ -128,7 +139,7 @@ const WhoWeAre = () => {
                 </motion.h3>
                 <motion.h3
                   initial={{ y: 20, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
+                  animate={isInView ? { y: 0, opacity: 1 } : { y: 20, opacity: 0 }}
                   transition={{ delay: 0.5, duration: 0.5 }}
                   className="text-2xl font-bold mb-3 text-center heading2"
                 >
@@ -136,7 +147,7 @@ const WhoWeAre = () => {
                 </motion.h3>
                 <motion.p
                   initial={{ y: 20, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
+                  animate={isInView ? { y: 0, opacity: 1 } : { y: 20, opacity: 0 }}
                   transition={{ delay: 0.55, duration: 0.5 }}
                   className="text-sm text-center para1"
                 >
@@ -149,7 +160,7 @@ const WhoWeAre = () => {
               <motion.div
                 className="relative ml-64 z-10 h-full"
                 initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+                animate={isInView ? { opacity: 1 } : { opacity: 0 }}
                 transition={{ delay: 0.2, duration: 0.6 }}
               >
                 <img
@@ -165,13 +176,13 @@ const WhoWeAre = () => {
           <motion.div
             className="lg:w-1/2 lg:pl-16 w-full"
             initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
             <motion.p
-              className="textcolor2 font-medium mb-2 md:mb-4 uppercase tracking-wider heading1 text-xl "
+              className="textcolor2 font-medium mb-2 md:mb-4 uppercase tracking-wider heading1 text-xl"
               initial={{ y: 20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
+              animate={isInView ? { y: 0, opacity: 1 } : { y: 20, opacity: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
             >
               WHO WE ARE
@@ -180,7 +191,7 @@ const WhoWeAre = () => {
             <motion.h2
               className="text-3xl md:text-4xl font-bold textcolor1 mb-4 md:mb-6 lg:text-5xl heading2"
               initial={{ y: 20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
+              animate={isInView ? { y: 0, opacity: 1 } : { y: 20, opacity: 0 }}
               transition={{ duration: 0.5, delay: 0.5 }}
             >
               Plumbing made simple with fast, effective solutions.
@@ -189,7 +200,7 @@ const WhoWeAre = () => {
             <motion.p
               className="textcolor3 mb-6 md:mb-8 para1 text-sm md:text-base"
               initial={{ y: 20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
+              animate={isInView ? { y: 0, opacity: 1 } : { y: 20, opacity: 0 }}
               transition={{ duration: 0.5, delay: 0.6 }}
             >
               Aliquam pellentesque quam aenean bibendum mollis per. Duis non
@@ -198,17 +209,22 @@ const WhoWeAre = () => {
             </motion.p>
 
             <div className="flex flex-col sm:flex-row items-center gap-4">
-              <Button
-                text="Discover more"
-                variant="primary"
-                icon="arrow"
-                delay={0.7}
-                className="color2 w-full sm:w-auto"
-              />
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                transition={{ duration: 0.5, delay: 0.7 }}
+              >
+                <Button
+                  text="Discover more"
+                  variant="primary"
+                  icon="arrow"
+                  className="color2 w-full sm:w-auto"
+                />
+              </motion.div>
 
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
+                animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.5, delay: 0.8 }}
                 className="w-full sm:w-64 mt-4 sm:mt-0 overflow-hidden rounded shadow-lg"
               >
@@ -217,9 +233,9 @@ const WhoWeAre = () => {
                   onClick={handleVideoToggle}
                   className="w-full h-full object-cover cursor-pointer"
                   poster="/api/placeholder/300/200"
+                  autoPlay
                   loop
                   muted
-                  autoPlay
                 >
                   <source src={video} type="video/mp4" />
                   Your browser does not support the video tag.

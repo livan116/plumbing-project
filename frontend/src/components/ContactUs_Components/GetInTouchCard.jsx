@@ -3,7 +3,7 @@ import { MapPin, Mail, Phone, Clock } from "lucide-react";
 
 export default function GetInTouchCard() {
     return (
-      <div className="px-6 md:px-10 md:py-10 max-w-max bg-white  shadow-2xl max-h-max z-100 ">
+      <div className="px-6 md:px-10 py-6 md:py-10 max-w-max bg-white  shadow-2xl max-h-max z-100 ">
         <div className="flex flex-col space-y-5 flex-wrap">
           <div className="textcolor2 heading1 uppercase text-xl">
             GET IN TOUCH

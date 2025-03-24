@@ -8,7 +8,7 @@ import logo from "../../assets/logo.png"
 
 const PipeoFooter = () => {
     return (
-        <footer className="relative color1 text-white md:px-10">
+        <footer className="relative color1 text-white md:px-10 mt-8">
             {/* Background Overlay */}
             <div
                 className="absolute inset-0 opacity-20 z-0"

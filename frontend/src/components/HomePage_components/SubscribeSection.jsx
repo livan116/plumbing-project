@@ -26,7 +26,7 @@ const SubscribeSection = () => {
   };
 
   return (
-    <section className="py-16 px-4">
+    <section className="py-8 px-4">
       <div className="max-w-3xl mx-auto text-center md:px-24">
         <motion.h2
           className="text-3xl md:text-4xl font-medium text-gray-800 mb-6 heading1"
